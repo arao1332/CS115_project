@@ -133,16 +133,16 @@ public class WaveTools {
     
     //sample rate is the time resolution of the wave file
     //a higher sample rate sounds more realistic
-    private int    sample_rate;
+    protected int    sample_rate;
     //bit depth is the size of the nubers used to store the
     //amplitude, thus affecting amplitude resolution and
     //in turn dynamics. More bits sounds better
-    private int    bit_depth;
+    protected int    bit_depth;
     //String used to find, load, and read into the
     //my_wav array, also this name is appended with -out
     //when the wave_write function is called
-    private String wav_name;
+    protected String wav_name;
     //internal 2D array used to store the wav file selected from
     //the graphical chooser when the WaveTools constructor is called
-    private double[][] my_wav;
+    protected double[][] my_wav;
 }
