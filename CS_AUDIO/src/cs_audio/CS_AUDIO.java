@@ -11,7 +11,8 @@ package delayLine;
  */
 public class delayLine extends WaveTools
 {
+public delayLine(){
+super()  
+}
 
-
-    
 }
