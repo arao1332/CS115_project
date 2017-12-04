@@ -12,7 +12,9 @@ package delayLine;
 public class delayLine extends WaveTools
 {
 public delayLine(){
-super()  
+double[][] delaybuffer = new double[][];
+my_wav();
+
 }
 
 }
