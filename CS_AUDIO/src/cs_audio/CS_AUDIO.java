@@ -9,7 +9,7 @@ package delayLine;
  *
  * @author macuser
  */
-public class delayLine 
+public class delayLine extends WaveTools
 {
 
 
