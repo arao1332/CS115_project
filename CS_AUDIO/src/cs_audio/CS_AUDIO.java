@@ -9,13 +9,9 @@ package delayLine;
  *
  * @author macuser
  */
-public class delayLine {
+public class delayLine 
+{
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+
     
 }
