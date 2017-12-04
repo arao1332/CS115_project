@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cs_audio;
+package delayLine;
 
 /**
  *
  * @author macuser
  */
-public class CS_AUDIO {
+public class delayLine {
 
     /**
      * @param args the command line arguments
