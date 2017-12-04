@@ -20,4 +20,10 @@ my_wav[0][1000]+ = my_wav[0][0];
 my_wav[0][i] = my_wav[0][i] * m + my_wav[0][i-t] * (1-m)
 }
 
+public void fixedDelay(int t, double m){
+  for (int i = t; i < my_wav.length(); i++)
+  {
+    my_wav[0][i] = my_wav[0][i] * m += my_wav[0][i-t] * (1-m);
+  }
+
 }
