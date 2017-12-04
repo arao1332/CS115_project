@@ -11,6 +11,9 @@ package delayLine;
  */
 public class delayLine extends WaveTools
 {
+
+protected double[][] delaybuffer = new double[][];
+
 public void fixeddelayLine(int t, double m){
 double m = 0.5;
 int t = 44100;
