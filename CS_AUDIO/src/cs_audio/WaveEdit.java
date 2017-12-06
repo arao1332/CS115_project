@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package waveedit;
+package cs_audio;
 
 /**
  *
@@ -20,10 +20,9 @@ public class WaveEdit {
         //my_wav variable
         WaveTools w_t = new WaveTools();
         //make the example file louder
-        w_t.normalize();
-        
+        CS_AUDIO delay = new CS_AUDIO();
         // reverse the example file
-        w_t.reverse();
+        delay.mutateFile(44100, 0.5);
         
         //save the result to a new file, so you can hear it
         w_t.write_wave();
