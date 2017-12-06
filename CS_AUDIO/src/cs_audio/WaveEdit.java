@@ -20,11 +20,12 @@ public class WaveEdit {
         //my_wav variable
        // WaveTools w_t = new WaveTools();
         //make the example file louder
-        CS_AUDIO delay = new CS_AUDIO();
+        //CS_AUDIO delay = new CS_AUDIO();
+        delayCircularBuffer delay1 = new delayCircularBuffer();
         // reverse the example file
-        delay.mutateFile(44100, 0.5);
+        delay1.mutateFile(44100, 1.0, 0.9);
         
         //save the result to a new file, so you can hear it
-        delay.write_wave();
+        delay1.write_wave();
     }
 }
