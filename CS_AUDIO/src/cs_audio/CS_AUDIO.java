@@ -28,3 +28,10 @@ public void fixedDelay(int t, double m)
     my_wav[0][i] = my_wav[0][i] * m += my_wav[0][i-t] * (1-m);
   }
 }
+
+
+// idea for polymorhpism: have fixedDelay method be called mutateFile() so each child can override this method
+// with their corresponding thing they do such as flanger or chorus or echo, etc,
+// then in main method when call a reference of the base delay class and call mutateFile() on that object, the
+// effect that gets generated will depend on the kind of child object that the bass class reference is pointing to
+// from matt
