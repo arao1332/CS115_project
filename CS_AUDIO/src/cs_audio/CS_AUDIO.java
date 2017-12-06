@@ -21,11 +21,21 @@ public class CS_AUDIO extends WaveTools
 //my_wav[0][i] = my_wav[0][i] * m + my_wav[0][i-t] * (1-m)
 //}
 
+/*
+
+ */
+public CS_AUDIO()
+{
+    super();
+}
 public void mutateFile(int t, double m)
 {
-  for (int i = t; i < my_wav.length; i++)
+  for (int j = 0; j < my_wav.length; j++)
   {
-    my_wav[0][i] = my_wav[0][i] * m + my_wav[0][i-t] * (1-m);
+      for (int i = t; i < my_wav[j].length; i++)
+      {
+        my_wav[j][i] = my_wav[j][i] * m + my_wav[j][i-t] * (1.0-m);
+      }
   }
 }
 }
