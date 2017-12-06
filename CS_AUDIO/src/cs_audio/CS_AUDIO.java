@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package delayLine;
+package cs_audio;
 
 /**
  *
  * @author macuser
  */
-public class delayLine extends WaveTools
+public class CS_AUDIO extends WaveTools
 {
-  protected double[][] delaybuffer = new double[][];
+  //protected double[][] delaybuffer = new double[][];
 
 //public void fixeddelayLine(int t, double m){
 //double m = 0.5;
@@ -23,10 +23,11 @@ public class delayLine extends WaveTools
 
 public void mutateFile(int t, double m)
 {
-  for (int i = t; i < my_wav.length(); i++)
+  for (int i = t; i < my_wav.length; i++)
   {
-    my_wav[0][i] = my_wav[0][i] * m += my_wav[0][i-t] * (1-m);
+    my_wav[0][i] = my_wav[0][i] * m + my_wav[0][i-t] * (1-m);
   }
+}
 }
 
 
