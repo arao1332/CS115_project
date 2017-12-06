@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package waveedit;
+package cs_audio;
 
 import java.io.*;
 import javax.swing.*;
