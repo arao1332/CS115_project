@@ -21,7 +21,7 @@ public class delayLine extends WaveTools
 //my_wav[0][i] = my_wav[0][i] * m + my_wav[0][i-t] * (1-m)
 //}
 
-public void fixedDelay(int t, double m)
+public void mutateFile(int t, double m)
 {
   for (int i = t; i < my_wav.length(); i++)
   {
