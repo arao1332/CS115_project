@@ -1,4 +1,4 @@
-package waveedit;
+package cs_audio;
 
 public class WavFileException extends Exception
 {
