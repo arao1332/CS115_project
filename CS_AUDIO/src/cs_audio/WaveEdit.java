@@ -18,14 +18,18 @@ public class WaveEdit {
         //instatiate a new WaveTools Object
         //instantiation also reads the wav into the internal
         //my_wav variable
-       // WaveTools w_t = new WaveTools();
+        //WaveTools w_t = new WaveTools();
         //make the example file louder
         //CS_AUDIO delay = new CS_AUDIO();
-        delayCircularBuffer delay1 = new delayCircularBuffer();
+        delayCircularBuffer delay1 = new delayCircularBuffer(44100);
+        //multiTapDelay tap1 = new multiTapDelay();
         // reverse the example file
-        delay1.mutateFile(44100, 1.0, 0.9);
+        delay1.mutateFile(44100, 0.5, 0.4);
+        //tap1.mutateFile(44100, 0.5, 4657);
+        
         
         //save the result to a new file, so you can hear it
         delay1.write_wave();
+        //tap1.write_wave();
     }
 }
