@@ -11,28 +11,26 @@ package cs_audio;
  */
 public class delayCircularBuffer extends CS_AUDIO 
 {
-    protected double[][] delaybuffer = new double[2][100];
+    protected double[][] delaybuffer; 
   
-    public delayCircularBuffer()
+    public delayCircularBuffer(int t)
     {
         super();
+        delaybuffer = new double[my_wav.length][t];
     }  
      
     public void mutateFile(int t, double m, double f)
     {   
-        for (int j = 0; j < my_wav.length; j++)
+       for (int j = 0; j < my_wav.length; j++)
         {
-            for (int i = t; i < my_wav[j].length; i++)
+           for (int i = t; i < my_wav[j].length; i++)
             {
-                for (int k = 0; k < my_wav[j].length; k++)
-                {
-                    delaybuffer[j][k] = my_wav[j][i] + delaybuffer[j][k] * f;
-        
-                    my_wav[j][i] = my_wav[j][i] + m + delaybuffer[j][k] * (1.0 - m);
-                    my_wav[j][i] = (k+ 1)% t;
+                int k = i%delaybuffer[j].length;// pointer
+                delaybuffer[j][k] = my_wav[j][i] + delaybuffer[j][k]*f;
+                my_wav[j][i] = my_wav[j][i]*m + delaybuffer[j][k]*(1.0-m);
+                
                 }
             }
         }
     }
-}
 
