@@ -21,10 +21,10 @@ public class WaveEdit {
         //WaveTools w_t = new WaveTools();
         //make the example file louder
         //CS_AUDIO delay = new CS_AUDIO();
-        delayCircularBuffer delay1 = new delayCircularBuffer(44100);
+        multiTapDelay delay1 = new multiTapDelay(10000);
         //multiTapDelay tap1 = new multiTapDelay();
         // reverse the example file
-        delay1.mutateFile(44100, 0.5, 0.4);
+        delay1.mutateFile(10, 0.15, 0.7);
         //tap1.mutateFile(44100, 0.5, 4657);
         
         
