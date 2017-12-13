@@ -11,9 +11,9 @@ package cs_audio;
  */
 public class Flanger extends delayCircularBuffer
 {
-    public Flanger()
+    public Flanger(int t)
     {
-       super(); 
+       super(t); 
     }   
     
     
