@@ -11,9 +11,8 @@ import java.util.ArrayList;
  */
 public class Chorus extends delayCircularBuffer{
     
-    public Chorus(){
-        super();
-        build_chorus();
+    public Chorus(int t){
+        super(t);
     }
     
 
